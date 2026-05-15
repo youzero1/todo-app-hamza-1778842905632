@@ -1,0 +1,171 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid transparent;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border);
+}
+
+.item.completed {
+  background: var(--color-surface-hover);
+  opacity: 0.75;
+}
+
+.item.editing {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.10);
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--color-border);
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  color: white;
+}
+
+.checkbox:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.checkbox.checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.text {
+  flex: 1;
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  word-break: break-word;
+  min-width: 0;
+}
+
+.completed .text {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.priority {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  padding: 2px 10px;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.priority_low {
+  background: var(--color-priority-low-bg);
+  color: var(--color-priority-low);
+}
+
+.priority_medium {
+  background: var(--color-priority-medium-bg);
+  color: var(--color-priority-medium);
+}
+
+.priority_high {
+  background: var(--color-priority-high-bg);
+  color: var(--color-priority-high);
+}
+
+.editForm {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.editInput {
+  flex: 1;
+  border: 1.5px solid var(--color-border-focus);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  outline: none;
+  background: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.10);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-1);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.iconBtn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  color: var(--color-text-muted);
+}
+
+.iconBtn:hover {
+  background: var(--color-surface-hover);
+}
+
+.editBtn:hover {
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.deleteBtn:hover {
+  color: var(--color-danger);
+  background: var(--color-danger-light);
+}
+
+.saveBtn {
+  color: var(--color-success);
+}
+
+.saveBtn:hover {
+  background: var(--color-success-light);
+}
+
+.cancelBtn {
+  color: var(--color-text-muted);
+}
+
+.cancelBtn:hover {
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+}
